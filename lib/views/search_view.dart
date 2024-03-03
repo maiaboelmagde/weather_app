@@ -1,9 +1,6 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/cubits/weather_cubit/weather_cubit.dart';
-import 'package:weather_app/models/weather_model.dart';
-import 'package:weather_app/services/get_weather_api.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -13,7 +10,6 @@ class SearchView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search a City'),
-        backgroundColor: const Color(0xff2A9CEE),
       ),
       body: Center(
         child: Container(

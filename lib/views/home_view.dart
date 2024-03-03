@@ -13,7 +13,6 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff2A9CEE),
         title: const Text('Weather App'),
         actions: [
           IconButton(
@@ -30,7 +29,7 @@ class HomeView extends StatelessWidget {
       body: BlocBuilder<WeatherCubit, WeatherCubitStete>(
         builder: (context, state) {
           if (state is WeatherInitialState) {
-            return NoWeatherBody();
+            return const NoWeatherBody();
           } else if (state is WeatherLoadedState) {
             return WeatherInfoBody(weatherModel: state.weatherModel);
           } else {
